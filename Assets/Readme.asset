@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 727a75301c3d24613a3ebcec4a24c2c8, type: 3}
+  title: Voxel Destructible Terrain
+  sections:
+  - heading: Разрушаемый воксельный терраин (стиль Deep Rock Galactic)
+    text: 'Прототип полностью разрушаемого мира: пещеры генерируются процедурно из
+      3D-шума, поверхность строится алгоритмом Marching Cubes, породу можно копать,
+      наращивать и сглаживать в реальном времени.'
+    linkText:
+    url:
+  - heading: 'Шаг 1. Открыть проект'
+    text: 'Откройте проект в Unity 6000.3.14f1 (Unity 6.3). Проект использует Universal
+      Render Pipeline (URP 17.3) и пакет Input System (1.19) — они уже подключены.'
+    linkText:
+    url:
+  - heading: 'Шаг 2. Открыть сцену'
+    text: 'Откройте сцену из папки Assets/Scenes. Если сцена пустая — выполните Шаг 3,
+      чтобы собрать её вручную.'
+    linkText:
+    url:
+  - heading: 'Шаг 3. Настроить объекты сцены'
+    text: '1) Создайте пустой GameObject и добавьте компонент VoxelTerrain (он сам
+      сгенерирует поле и чанки на старте). 2) На Main Camera добавьте компоненты
+      FreeFlyCamera и TerrainDeformer. Камера при старте телепортируется в стартовую
+      комнату терраина.'
+    linkText:
+    url:
+  - heading: 'Шаг 4. Настроить генерацию (по желанию)'
+    text: 'В инспекторе VoxelTerrain задайте dimensions/voxelSize/chunkSize (размеры),
+      seed и caveNoiseScale (форма пещер: меньше масштаб — крупнее полости), isoLevel
+      (порог поверхности), spawnRoomRadius (стартовая комната), borderThickness
+      (неразрушаемая оболочка) и smoothIterations (сглаживание рельефа).'
+    linkText:
+    url:
+  - heading: 'Шаг 5. Запуск'
+    text: 'Нажмите Play — вы окажетесь внутри пещеры. Управление: WASD — движение,
+      мышь — обзор, Space/Ctrl — вверх/вниз, Shift — ускорение. ЛКМ — копать,
+      ПКМ — строить, СКМ — сглаживать, колесо — радиус кисти, Esc — отпустить курсор.'
+    linkText:
+    url:
+  - heading: Документация URP
+    text:
+    linkText: Подробнее про Universal Render Pipeline
+    url: https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest
+  - heading: Алгоритм Marching Cubes
+    text:
+    linkText: Описание алгоритма
+    url: https://en.wikipedia.org/wiki/Marching_cubes
+  loadedLayout: 1
